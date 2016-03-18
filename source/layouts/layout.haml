@@ -1,0 +1,19 @@
+!!!html
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %title
+      Introduction To Middleman
+      = " | #{current_page.data.title}" if current_page.data.title
+    = stylesheet_link_tag 'normalize', 'screen'
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', 'https://cdn.firebase.com/js/client/2.4.1/firebase.js', 'screen'
+
+  %body{'data-slide-number': current_page.data.slide_number, 'data-firebase-url': data.firebase.url, 'data-view': current_page.data.type, 'class': "#{current_page.data.type}-view"}
+    .slide{'data-slide-id': current_page.data.slide_number }
+      .slide-contents{'data-title': current_page.data.title, class: current_page.data.css_class}
+        = yield
+
+    %footer
+      #qr
+        %img{src: 'images/apb.s.danq.me.png', alt: 'http://apb.s.danq.me/'}
+        %p apb.s.danq.me

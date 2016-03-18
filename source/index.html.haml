@@ -1,0 +1,356 @@
+---
+type: follow
+---
+
+#follow
+  .slide-1
+    %h1 apb.s.danq.me
+    %p
+      You're in
+      %em follow along
+      mode.
+    %p
+      If you'd like slightly more-detailed information about what's
+      being explained in the presentation, check this screen! There'll
+      be links to further reading and you can always come "back" to this
+      page when you're ready to join the presentation again.
+    %p
+      I totally don't mind if you spend the entire presentation staring
+      at your phone screen, because I'll just assume you're looking at this!
+
+  .slide-2
+    %h1 About Dan Q
+    %p
+      I'm the Web &amp; CMS Developer at the Bodleian Libraries, which isn't actually a very accurate
+      description of the things that I do (we're working on revising it). But as a rule of thumb,
+      if it begins with www.bodleian.ox.ac.uk, blogs.bodleian.ox.ac.uk, or it's an exhibition
+      website... then it's probably me that's getting shouted at when it's down.
+    %p
+      I'm also the Technical Director at Three Rings CIC, a non-profit voluntary organisation that
+      I founded back in 2002. We produce web-based software to help streamline the administration of
+      charities and voluntary organisations: we're used by lots of people you'll have heard of, like
+      Samaritans, Childline, and Macmillan.
+    %p
+      But beyond all of that, I'm also an enormous nerd and I love an excuse to play with fun new
+      technologies. I started playing with static site generators in 2014, and have been glad to find
+      real excuses to use them, since.
+    %p
+      You can find my personal weblog at:
+      %a{href: 'https://danq.me/'} DanQ.me
+    %p
+      And yes, that really is my full name.
+
+  .slide-3
+    %h1 History of static sites
+    %p
+      Fundamentally, the web was
+      %em invented
+      for the purpose of delivering static sites. That's why we still talk about "HTML files", even
+      when we know perfectly well that the vast majority of the content on the web is dynamically-generated
+      on demand for web visitors.
+    %p
+      But traditional static sites have some huge problems. For example, if you want to put a menu on the top of every
+      page, you need to edit every single page. And you have to edit them all again every time your menu changes.
+      Blurgh.
+    %p
+      The CMS has become the ubiquitous solution to this and other problems, providing an easy and powerful way
+      to generate pages "on demand" based upon the content of a database, which in turn is maintained using
+      editing tools (often WYSIWYG).
+    %p
+      But modern static site
+      %em generators
+      learn from the lessons that CMSes have taught us, and bring some other advantages to the table too.
+
+  .slide-4
+    %h1 Static site benefits
+    %p
+      If I'm not winning you over on the benefits of static sites, I recommend
+      %a{href: 'https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/'} 
+        this article by SmashingMagazine
+      as a great bit of extra reading.
+
+  .slide-5
+    %h1 Static site weaknesses
+    %p
+      Just look at the screen.
+
+  .slide-6
+    %h1 Example static sites
+    %p
+      We're going to look at four real-world static websites, each representing a different use case and,
+      sometimes, a different approach. They are:
+    %ul
+      %li The documentation website for Twee2, an open-source project
+      %li A semi-automatic blog aggregator for a community of friends
+      %li The interactive content on kiosk computers in the Weston Library
+      %li This presentation! (I'll be showing you later how this presentation was made)
+
+  .slide-7
+    %h1 Twee2
+    %p
+      I lead an open-source project to produce a command-line/programmer-friendly alternative to Twine,
+      a tool for writing interactive fiction. I use Middleman to produce the documentation for this tool,
+      which can be seen at:
+    %p
+      %a{href: 'https://dan-q.github.io/twee2/'} dan-q.github.io/twee2
+    %p
+      The source code from which the documentation is produced can be found in Twee2's GitHub repository,
+      at:
+    %p
+      %a{href: 'https://github.com/Dan-Q/twee2/tree/master/web'} github.com/Dan-Q/twee2/tree/master/web
+
+  .slide-8
+    %h1 Abnib
+    %p
+      For many years, I've run a blog aggregator collating the weblogs of a circle of friends I used
+      to spend time with when I lived in Aberystwyth. It started as a completely automated tool, but I
+      soon discovered that it provided more value if each entry was given some interpretation. Now,
+      each post part-writes itself, and I "fill in the blanks" and select a picture to accompany it.
+      The website itself can be found at:
+    %p
+      %a{href: 'http://abnib.co.uk/'} abnib.co.uk
+    %p
+      And an (often-out-of-date) copy of the entire archive, plus the source code used to generate it,
+      can be found at:
+    %p
+      %a{href: 'https://github.com/dan-q/abnib'} github.com/dan-q/abnib
+    %p
+      Unlike the other example sites I'm showing, this one is powered by Jekyll.
+
+  .slide-9
+    %h1 Bodleian Libraries kiosks
+    %p
+      With the opening of the Weston Library, we had the opportunity to put out kiosk computers (most
+      of them are Android tablets wrapped in a fancy metal frame and stand and with UPS units in the
+      bases to trickle-charge them throughout the day) to showcase exhibition content. But difficulties
+      with the reliability of WiFi, a desire to isolate the devices from the network (given that they'd
+      be used by members of the public), and a need to deliver content like high-definition video
+      without delays meant that the best solution seemed to be to host the content on the device itself.
+    %p
+      We're using a £5-per-device Android app called
+      %a{href: 'http://www.android-kiosk.com/'} Kiosk Browser Lockdown
+      to showcase the content: this app prevents users from accessing the desktop or any other applications
+      on the device without our permission. Right now, the static sites on the tablets have been hand-made
+      (from a template) for each exhibition, but we're planning to use Middleman to speed up the process
+      from later this year.
+    %p
+      The web is a particularly good platform for generating this kind of content, because we can use
+      our existing skills and web content to produce fast and engaging content... and because developing
+      for a single browser platform is just about the easiest web development you'll ever do!
+    %p
+      We plan to open-source the result of this effort.
+
+  .slide-10
+    %h1 This presentation
+    %p
+      And, of course, this presentation itself is powered by Middleman. I've made a few tweaks to the
+      out-of-the-box configuration to help it handle Ajax-loading of content and to use the HTML5
+      History API to put "where I'm up to"-capable web addresses in the address bar, but it's otherwise
+      pretty standard. I've added some Javascript to allow it to integrate with
+      %a{href: 'https://www.firebase.com/'} Firebase
+      in order to facilitate the mobile phone/spectator's device functionality.
+    %p
+      You can get the full source code and try it for yourself at:
+    %p
+      %a{href: 'https://github.com/dan-q/introduction-to-middleman'} github.com/dan-q/introduction-to-middleman
+
+  .slide-11
+    %h1 Static site generators
+    %p
+      Here are some links for your convenience:
+    %ul
+      %li
+        %a{href: 'https://jekyllrb.com/'} Jekyll
+      %li
+        %a{href: 'http://octopress.org/'} Octopress
+      %li
+        %a{href: 'https://middlemanapp.com/'} Middleman
+      %li
+        %a{href: 'https://gohugo.io/'} Hugo
+      %li
+        %a{href: 'https://hexo.io/'} Hexo
+      %li
+        %a{href: 'http://blog.getpelican.com/'} Pelican
+      %li
+        %a{href: 'https://getgrav.org/'}  Grav
+      %li
+        %a{href: 'https://jaspervdj.be/hakyll/'} Hakyll
+
+  .slide-12.slide-13
+    %h1 Mechanism of operation
+    %p
+      Just look at the screen.
+
+  .slide-14.slide-15.slide-16.slide-17.slide-18.slide-19
+    %h1 Making this presentation
+    %p
+      You can get the full source code of this presentation and try it for yourself at:
+    %p
+      %a{href: 'https://github.com/dan-q/introduction-to-middleman'} github.com/dan-q/introduction-to-middleman
+
+
+
+
+
+
+
+
+
+  .slide-20.slide-21
+    %h1 Complete notes
+    %p
+      Here are complete notes from every slide you saw:
+
+    %h2 About Dan Q
+    %p
+      I'm the Web &amp; CMS Developer at the Bodleian Libraries, which isn't actually a very accurate
+      description of the things that I do (we're working on revising it). But as a rule of thumb,
+      if it begins with www.bodleian.ox.ac.uk, blogs.bodleian.ox.ac.uk, or it's an exhibition
+      website... then it's probably me that's getting shouted at when it's down.
+    %p
+      I'm also the Technical Director at Three Rings CIC, a non-profit voluntary organisation that
+      I founded back in 2002. We produce web-based software to help streamline the administration of
+      charities and voluntary organisations: we're used by lots of people you'll have heard of, like
+      Samaritans, Childline, and Macmillan.
+    %p
+      But beyond all of that, I'm also an enormous nerd and I love an excuse to play with fun new
+      technologies. I started playing with static site generators in 2014, and have been glad to find
+      real excuses to use them, since.
+    %p
+      You can find my personal weblog at:
+      %a{href: 'https://danq.me/'} DanQ.me
+    %p
+      And yes, that really is my full name.
+
+    %h2 History of static sites
+    %p
+      Fundamentally, the web was
+      %em invented
+      for the purpose of delivering static sites. That's why we still talk about "HTML files", even
+      when we know perfectly well that the vast majority of the content on the web is dynamically-generated
+      on demand for web visitors.
+    %p
+      But traditional static sites have some huge problems. For example, if you want to put a menu on the top of every
+      page, you need to edit every single page. And you have to edit them all again every time your menu changes.
+      Blurgh.
+    %p
+      The CMS has become the ubiquitous solution to this and other problems, providing an easy and powerful way
+      to generate pages "on demand" based upon the content of a database, which in turn is maintained using
+      editing tools (often WYSIWYG).
+    %p
+      But modern static site
+      %em generators
+      learn from the lessons that CMSes have taught us, and bring some other advantages to the table too.
+
+    %h2 Static site benefits
+    %p
+      If I'm not winning you over on the benefits of static sites, I recommend
+      %a{href: 'https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/'} 
+        this article by SmashingMagazine
+      as a great bit of extra reading.
+
+    %h2 Static site weaknesses
+    %p
+      Just look at the screen.
+
+    %h2 Example static sites
+    %p
+      We're going to look at four real-world static websites, each representing a different use case and,
+      sometimes, a different approach. They are:
+    %ul
+      %li The documentation website for Twee2, an open-source project
+      %li A semi-automatic blog aggregator for a community of friends
+      %li The interactive content on kiosk computers in the Weston Library
+      %li This presentation! (I'll be showing you later how this presentation was made)
+
+    %h3 Twee2
+    %p
+      I lead an open-source project to produce a command-line/programmer-friendly alternative to Twine,
+      a tool for writing interactive fiction. I use Middleman to produce the documentation for this tool,
+      which can be seen at:
+    %p
+      %a{href: 'https://dan-q.github.io/twee2/'} dan-q.github.io/twee2
+    %p
+      The source code from which the documentation is produced can be found in Twee2's GitHub repository,
+      at:
+    %p
+      %a{href: 'https://github.com/Dan-Q/twee2/tree/master/web'} github.com/Dan-Q/twee2/tree/master/web
+
+    %h3 Abnib
+    %p
+      For many years, I've run a blog aggregator collating the weblogs of a circle of friends I used
+      to spend time with when I lived in Aberystwyth. It started as a completely automated tool, but I
+      soon discovered that it provided more value if each entry was given some interpretation. Now,
+      each post part-writes itself, and I "fill in the blanks" and select a picture to accompany it.
+      The website itself can be found at:
+    %p
+      %a{href: 'http://abnib.co.uk/'} abnib.co.uk
+    %p
+      And an (often-out-of-date) copy of the entire archive, plus the source code used to generate it,
+      can be found at:
+    %p
+      %a{href: 'https://github.com/dan-q/abnib'} github.com/dan-q/abnib
+    %p
+      Unlike the other example sites I'm showing, this one is powered by Jekyll.
+
+    %h3 Bodleian Libraries kiosks
+    %p
+      With the opening of the Weston Library, we had the opportunity to put out kiosk computers (most
+      of them are Android tablets wrapped in a fancy metal frame and stand and with UPS units in the
+      bases to trickle-charge them throughout the day) to showcase exhibition content. But difficulties
+      with the reliability of WiFi, a desire to isolate the devices from the network (given that they'd
+      be used by members of the public), and a need to deliver content like high-definition video
+      without delays meant that the best solution seemed to be to host the content on the device itself.
+    %p
+      We're using a £5-per-device Android app called
+      %a{href: 'http://www.android-kiosk.com/'} Kiosk Browser Lockdown
+      to showcase the content: this app prevents users from accessing the desktop or any other applications
+      on the device without our permission. Right now, the static sites on the tablets have been hand-made
+      (from a template) for each exhibition, but we're planning to use Middleman to speed up the process
+      from later this year.
+    %p
+      The web is a particularly good platform for generating this kind of content, because we can use
+      our existing skills and web content to produce fast and engaging content... and because developing
+      for a single browser platform is just about the easiest web development you'll ever do!
+    %p
+      We plan to open-source the result of this effort.
+
+    %h3 This presentation
+    %p
+      And, of course, this presentation itself is powered by Middleman. I've made a few tweaks to the
+      out-of-the-box configuration to help it handle Ajax-loading of content and to use the HTML5
+      History API to put "where I'm up to"-capable web addresses in the address bar, but it's otherwise
+      pretty standard. I've added some Javascript to allow it to integrate with
+      %a{href: 'https://www.firebase.com/'} Firebase
+      in order to facilitate the mobile phone/spectator's device functionality.
+    %p
+      You can get the full source code and try it for yourself at:
+    %p
+      %a{href: 'https://github.com/dan-q/introduction-to-middleman'} github.com/dan-q/introduction-to-middleman
+
+    %h2 Static site generators
+    %p
+      Here are some links for your convenience:
+    %ul
+      %li
+        %a{href: 'https://jekyllrb.com/'} Jekyll
+      %li
+        %a{href: 'http://octopress.org/'} Octopress
+      %li
+        %a{href: 'https://middlemanapp.com/'} Middleman
+      %li
+        %a{href: 'https://gohugo.io/'} Hugo
+      %li
+        %a{href: 'https://hexo.io/'} Hexo
+      %li
+        %a{href: 'http://blog.getpelican.com/'} Pelican
+      %li
+        %a{href: 'https://getgrav.org/'}  Grav
+      %li
+        %a{href: 'https://jaspervdj.be/hakyll/'} Hakyll
+
+    %h2 Making this presentation
+    %p
+      You can get the full source code of this presentation and try it for yourself at:
+    %p
+      %a{href: 'https://github.com/dan-q/introduction-to-middleman'} github.com/dan-q/introduction-to-middleman
