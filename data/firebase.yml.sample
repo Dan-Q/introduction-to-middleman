@@ -3,5 +3,4 @@
 # you'll need to set up an empty Firebase application and put its URL and a
 # prefix (unique for all of your presentations) here, and copy this file to
 # firebase.yml. Leave the URL blank to not use Firebase.
-
 url: https://your-app-name-here.firebaseio.com/intro-to-middleman
