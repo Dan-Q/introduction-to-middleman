@@ -2,6 +2,7 @@
 title: Making This Presentation
 slide_number: 17
 css_class: center
+type: slide
 ---
 
 # Making this presentation

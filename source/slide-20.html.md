@@ -1,6 +1,7 @@
 ---
 title: Conclusion
 slide_number: 20
+type: slide
 ---
 
 # Conclusion
