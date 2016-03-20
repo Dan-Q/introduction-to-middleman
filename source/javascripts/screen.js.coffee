@@ -38,11 +38,13 @@ $ ->
           show_current_slide()
 
   next_slide = ->
+    return unless $('body').data('view') == 'slide'
     # next slide
     current_slide_number++
     show_current_slide()
 
   prev_slide = ->
+    return unless $('body').data('view') == 'slide'
     # previous slide
     if(current_slide_number > 1)
       current_slide_number--
