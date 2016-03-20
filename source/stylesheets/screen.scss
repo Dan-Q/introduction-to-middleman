@@ -100,12 +100,16 @@ body.follow-view {
     margin: 0.5em 1em;
     width: auto;
 
-    #follow > * {
-      display: none;
+    &.hidden {
+      display: block;
+    }
+  }
 
-      &.current {
-        display: block;
-      }
+  .follow-slide {
+    display: none;
+
+    &.current {
+      display: block;
     }
   }
 
